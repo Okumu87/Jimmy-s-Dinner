@@ -1,3 +1,59 @@
-body {
+@import url('https://fonts.googleapis.com/css2?family=Smythe&display=swap');
+
+*{
     margin: 0;
-} 
+    padding: 0;
+    box-sizing: border-box;
+}
+
+h3{
+    font-weight: 500;
+    font-size:1.5rem;
+}
+
+h4{
+    font-weight: 200;
+}
+
+p{
+    color: #8B8B8B;
+}
+
+img{
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+
+body{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4efef;
+}
+
+.container{
+    max-width: 500px;
+    background-color: white;
+    margin: 5rem auto;
+    font-family: "Smythe", system-ui;
+}
+
+.food-img{
+    margin-right: .5rem;
+}
+.menu-recipe{
+    display: flex;
+}
+
+.menu-item{
+    border-bottom: 1px solid #ddd;
+    padding: 1rem 0;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 1rem;
+}
+
+.add-btn{
+    cursor: pointer;
+}
