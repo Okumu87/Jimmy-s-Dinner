@@ -38,8 +38,9 @@ body{
     font-family: "Smythe", system-ui;
 }
 
+
 .food-img{
-    margin-right: .5rem;
+    margin-right: 1rem;
 }
 .menu-recipe{
     display: flex;
@@ -47,9 +48,9 @@ body{
 
 .menu-item{
     border-bottom: 1px solid #ddd;
-    padding: 1rem 0;
+    padding: 1rem 1rem;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
     gap: 1rem;
 }
