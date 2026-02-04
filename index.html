@@ -12,6 +12,7 @@
         <img src="./images/header.png" alt="header">
       </header>
      <main>
+      <!-- menu items section -->
         <div class="menu" id ="menu">
           <div class="menu-item">
             <div class="menu-recipe">
@@ -57,13 +58,48 @@
           </div>
          
         </div>
+        <!-- order section  -->
         <div class="order">
-          <h2>Your Order</h2>
-        <div class="items">
-          <h5>Total price: $0</h5>
-        <a href="#" class="btn-order">Complete Order</a>
+          <div class="ordered-items" id="ordered-items">
+              <h2>Your Order</h2>
+              <!-- items prices total -->
+          <div class="items">
+              <!-- Ordered items will be added here dynamically -->
+               <div class="item">
+                <div class="item-content">
+                  <div class="item-item__button">
+                      <h3>pizza</h3>
+                      <a href="#" class="remove-btn">remove</a>
+                  </div>
+                    <div class="price">
+                        <h4>$14</h4>
+                    </div>
+                </div>
+               </div>
+               <!-- total section  -->
+           <div class="total-order">
+            <div class="total">
+              <div class="total-price">
+                <h5>Total price:</h5>
+                <h4>$0</h4>
+              </div>
+              <a href="#" class="btn-order">Complete Order</a>
+            </div>
+          </div>
         </div>
-        </div>
+      </div>
+      </div>
+
+      <!-- payment section modal -->
+      <div class="modal-overlay" id="paymentModal">
+        <h1>Enter card details</h1>
+        <form action="#" class="payment-form">
+          <input type="text" placeholder="Enter your name ">
+          <input type="text" placeholder="Enter your card number ">
+          <input type="text" placeholder="Enter CVV"> 
+          <a type="submit" class="pay-btn">Pay</a>
+        </form>
+      </div>
      </main>
     </div>
 
