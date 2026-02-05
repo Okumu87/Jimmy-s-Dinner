@@ -116,6 +116,30 @@ body{
     }
 }
 
+/* modal overlay */
+.modal-overlay{
+    position: fixed;
+    width: 400px;
+    border: 1px solid black;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.payment-form{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  width: 100%;
+}
+
 .btn-order{
    display: block;
    font-size: 1.2rem;
