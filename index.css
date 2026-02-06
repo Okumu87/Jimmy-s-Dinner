@@ -38,7 +38,7 @@ body{
 .container{
     max-width: 400px;
     background-color: white;
-    margin: 5rem auto;
+    margin:8rem auto;
     font-family: "Smythe", system-ui;
 }
 
@@ -46,6 +46,9 @@ body{
 .food-img{
     margin-right: 1rem;
 }
+
+/* menu items section */
+
 .menu-recipe{
     display: flex;
 }
@@ -70,7 +73,6 @@ body{
 }
 
 .ordered-items{
-    /* display: none; */
 
     h2{
         text-align: center;
@@ -118,26 +120,49 @@ body{
 
 /* modal overlay */
 .modal-overlay{
-    position: fixed;
-    width: 400px;
-    border: 1px solid black;
-    top: 40%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background-color: white;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    background-color: rgba(0, 0, 0, 0.5);
 }
 
 .payment-form{
+  position: fixed;
+  top: 44.1%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   gap: 1rem;
-  width: 100%;
+  min-width: 400px;
+  padding: 2rem;
+
+  input{
+    padding: .8rem;
+    width: 100%;
+    border: 2px solid #757575;
+    border-radius: 4px;
+  }
+
+  input::-webkit-inner-spin-button,
+  input::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+
+  
+
+  .pay-btn{
+    display: block;
+    font-size: 1rem;
+    text-align: center;
+    background-color: #16DB99;
+    color: white;
+    cursor: pointer;
+    width: 100%;
+    padding: 1rem;
+    border: none;
+  }
 }
 
 .btn-order{
@@ -149,4 +174,25 @@ body{
    padding: .8rem;
    margin-top: 2rem;
    cursor: pointer;
+}
+
+
+/* Thank you message */
+
+.thank-you{
+    text-align: center;
+    background-color: #ECFDF5;
+    padding: 2rem;
+    border-radius: 1px;
+    p{
+        color: #065F46;
+        font-size: 1.5rem;
+       
+    }
+}
+
+/* hide class */
+
+.hide{
+    display: none;
 }
