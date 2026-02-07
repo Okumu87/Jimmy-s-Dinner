@@ -118,14 +118,14 @@ body{
     }
 }
 
-/* modal overlay */
-.modal-overlay{
-    background-color: rgba(0, 0, 0, 0.5);
-}
+/* modal overlay  toggle */
+/* .modal-overlay{
+    background-color: rgba(0, 0, 0, 0.1);
+} */
 
 .payment-form{
   position: fixed;
-  top: 44.1%;
+  top: 48.1%;
   left: 50%;
   transform: translate(-50%, -50%);
   background-color: white;
