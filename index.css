@@ -63,8 +63,18 @@ body{
 }
 
 .add-btn{
+    background: none;
+    border: none;
     cursor: pointer;
+
+    transition: transform 0.15s ease, opacity 0.15s ease;
 }
+.add-btn:hover{
+    transform: scale(1.1);
+    opacity: 0.8;       
+}
+
+
 /* Order  */
 
 .order{
