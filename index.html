@@ -31,6 +31,8 @@
              <button 
              type="button" 
              class="add-btn" 
+             id="add-btn"
+             data-id="0"
              aria-label="Add Pizza to cart">
               <img src="./images/add-btn.png" alt="Add to order btn">
             </button>
@@ -50,6 +52,8 @@
               <button 
              type="button" 
              class="add-btn" 
+             id="add-btn"
+             data-id="1"
              aria-label="Add Hamburger to cart">
               <img src="./images/add-btn.png" alt="Add to order btn">
             </button>
@@ -70,6 +74,8 @@
               <button 
              type="button" 
              class="add-btn" 
+             id="add-btn"
+             data-id="2"
              aria-label="Add Beer to cart">
               <img src="./images/add-btn.png" alt="Add to order btn">
             </button>
@@ -83,7 +89,7 @@
               <!-- items prices total -->
           <div class="items">
               <!-- Ordered items will be added here dynamically -->
-               <div class="item">
+               <div class="total-items " id="total-Items">
                 <div class="item-content">
                   <div class="item-item__button">
                       <h3>pizza</h3>
@@ -95,7 +101,7 @@
                 </div>
                </div>
                <!-- total section  -->
-           <div class="total-order ">
+           <div class="total-order " id="total-menu">
             <div class="total">
               <div class="total-price">
                 <h5>Total price:</h5>
