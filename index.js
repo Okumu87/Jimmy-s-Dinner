@@ -1,32 +1,18 @@
 import { menuArray } from './data.js';
 
-
-// toggle order section
-const addBtn = document.getElementById('add-btn');
-const totalItems = document.getElementById('total-Items'); 
-const totalMenu = document.getElementById('total-menu'); 
-
-addBtn.addEventListener('click', addItemToOrder);
-
-function addItemToOrder(){
-    console.log('Add button clicked');
- const item = menuArray[0]; // Example: adding the first item (Pizza) to the order
- const orderItem = document.createElement('div');
+const addBtns = document.querySelectorAll('.add-btn');
+const orderedItems = document.getElementById('ordered-items');
 
 
- orderItem.classList.add('item-content');
- orderItem.innerHTML = `
-  <div class="item-item__button">
-        <h3>${item.name}</h3>
-        <a href="#" class="remove-btn">remove</a>
-  </div>
- <div class="price">
-        <h4>$${item.price}</h4>
-</div>
- `;
-totalItems.appendChild(orderItem);
- totalMenu.style.display = 'block'; // Show the total menu section when an item is added 
-}
+
+addBtns.forEach(btn => {
+    btn.addEventListener('click', function() {
+      orderedItems.classList.remove('hide');
+        const itemId = this.dataset.id;
+        const item = menuArray.find(item => item.id === parseInt(itemId, 10));
+        console.log(`Added ${item.name} to cart!`);
+    });
+});
 
 
 
