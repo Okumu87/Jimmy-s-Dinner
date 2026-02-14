@@ -78,7 +78,7 @@ body{
 /* Order  */
 
 .order{
-    height: 300px;
+    min-height: 300px;
     padding: 1rem;
 }
 
