@@ -14,7 +14,7 @@
      <main>
       <!-- menu items section -->
        <!-- modal start -->
-       <div class="modal-overlay " id="paymentModal">
+       <div id="paymentModal">
         <div class="menu" id="menu">
           <!-- menu items will be rendered here from data.js -->
         </div>
@@ -35,7 +35,7 @@
                 <h5>Total price:</h5>
                 <h4 id="total-price">$0</h4>
               </div>
-              <a href="#" class="btn-order">Complete Order</a>
+              <a href="#" class="btn-order" id="order-btn">Complete Order</a>
             </div>
           </div>
         </div> 
@@ -51,9 +51,9 @@
       
         <form action="#" class="payment-form hide">
           <h1>Enter card details</h1>
-          <input type="text" placeholder="Enter your name ">
-          <input type="number" placeholder="Enter your card number ">
-          <input type="number" placeholder="Enter CVV"> 
+          <input type="text" id="name" placeholder="Enter your name ">
+          <input type="number" id="card" placeholder="Enter your card number ">
+          <input type="number" id="cvv" placeholder="Enter CVV"> 
           <button type="submit" class="pay-btn">Pay</button>
         </form>
       

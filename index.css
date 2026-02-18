@@ -129,9 +129,9 @@ body{
 }
 
 /* modal overlay  toggle */
-/* .modal-overlay{
+.modal-overlay{
     background-color: rgba(0, 0, 0, 0.1);
-} */
+}
 
 .payment-form{
   position: fixed;
@@ -194,6 +194,14 @@ body{
     background-color: #ECFDF5;
     padding: 2rem;
     border-radius: 1px;
+    position: fixed;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1000;
+    width: 90%;
+    max-width: 400px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     p{
         color: #065F46;
         font-size: 1.5rem;

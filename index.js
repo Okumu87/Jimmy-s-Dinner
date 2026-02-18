@@ -4,6 +4,7 @@ const menuEl = document.getElementById('menu');
 const orderedItems = document.getElementById('ordered-items');
 const itemsContainer = document.getElementById('items-content');
 const totalPriceEl = document.getElementById('total-price');
+const OrderBtn = document.getElementById('order-btn');
 
 // Render menu from data.js
 function renderMenu() {
@@ -83,6 +84,48 @@ orderedItems.addEventListener('click', (e) => {
   }
 });
 
+// order functionality
+OrderBtn.addEventListener('click', (e) => {
+  e.preventDefault();
+  const paymentModal = document.getElementById('paymentModal');
+  const paymentForm = document.querySelector('.payment-form');
+  paymentModal.classList.add('modal-overlay');
+  paymentForm.classList.remove('hide');
+});
+
+// payment form submit
+const paymentForm = document.querySelector('.payment-form');
+paymentForm.addEventListener('submit', (e) => {
+  e.preventDefault();
+  const nameInput = document.getElementById('name');
+  const cardInput = document.getElementById('card');
+  const cardCVV = document.getElementById('cvv');
+  if (nameInput.value.trim() === '' || cardInput.value.trim() === '' || cardCVV.value.trim() === '') {
+    alert('Please fill in all payment details.');
+    return;
+  }
+  // Simulate payment processing
+  setTimeout(() => {
+    // Show thank-you message
+    const thankYouMessage = document.getElementById('thankYouMessage');
+    const thankYouText = thankYouMessage.querySelector('p');
+    thankYouText.textContent = `Thanks, ${nameInput.value}! Your order is on its way!`;
+    thankYouMessage.classList.remove('hide');
+    
+    // Reset cart and close modal
+    itemsContainer.innerHTML = '';
+    updateTotal();
+    const paymentModal = document.getElementById('paymentModal');
+    paymentModal.classList.remove('modal-overlay');
+    paymentForm.classList.add('hide');
+    paymentForm.reset();
+    
+    // Hide thank-you message after 3 seconds
+    setTimeout(() => {
+      thankYouMessage.classList.add('hide');
+    }, 3000);
+  }, 1000);
+});
 // initialize
 renderMenu();
 updateTotal();
